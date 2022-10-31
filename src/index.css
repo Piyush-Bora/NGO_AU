@@ -1,13 +1,45 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("./fonts/gilroy.otf");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer base {
+  body {
+    @apply min-h-screen antialiased font-gilroy bg-[#FFFEF9];
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 8px;
+    position: absolute;
+  }
+  ::-webkit-scrollbar:hover {
+    width: 8px;
+    position: absolute;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #46525e;
+  }
+  ::-webkit-scrollbar-track:hover {
+    visibility: visible;
+    background: #46525e;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #1c5f80;
+    border-radius: 8px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #445f6d;
+    border-radius: 8px;
+  }
 }
